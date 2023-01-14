@@ -1,0 +1,1 @@
+# T_Komp_zadanie
