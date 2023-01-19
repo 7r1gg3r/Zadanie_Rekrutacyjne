@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace T_Komp_zadanie.Model
+    /* Klasa implementująca interfejs ICommand służąca do łączenia komendy z funkcją,
+     * która zostanie uruchomiona przy aktywacji*/
 {
     internal class RelayCommand : ICommand
     {

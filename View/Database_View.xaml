@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:T_Komp_zadanie.View"
         mc:Ignorable="d"
-        Title="Database_View" Height="450" Width="800">
+        Title="Database_View" Height="268" Width="419" ResizeMode="NoResize">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="69,58,0,0" VerticalAlignment="Top" Command="{Binding ButtonCommand}" />
-
+        <Button Content="Sprawdź połączenie" HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top" Command="{Binding CheckCommand}" CommandParameter="{Binding ElementName=PasswordBox}" Width="113" />
+        <Button Content="Załaduj dane" HorizontalAlignment="Left" Margin="236,196,0,0" VerticalAlignment="Top" Command="{Binding LoadCommand}" IsEnabled="{Binding IsEnabled}"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="10,50,0,0" TextWrapping="Wrap" Text="{Binding Login}" VerticalAlignment="Top" Width="113"/>
+        <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="29" Margin="10,119,0,0" VerticalAlignment="Top" Width="113" PasswordChar="#"/>
+        <Label Content="Login" HorizontalAlignment="Left" Height="35" Margin="10,15,0,0" VerticalAlignment="Top" Width="113" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Hasło" HorizontalAlignment="Left" Height="35" Margin="10,84,0,0" VerticalAlignment="Top" Width="113" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <DataGrid ItemsSource="{Binding ItemList}" Margin="135,15,10,61"/>
     </Grid>
 </Window>
